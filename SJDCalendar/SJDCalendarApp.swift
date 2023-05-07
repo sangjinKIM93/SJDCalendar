@@ -13,7 +13,7 @@ struct SJDCalendarApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationView {
-                CalendarView()
+                CalendarView().environmentObject(CalendarViewModel())
             }
         }
     }

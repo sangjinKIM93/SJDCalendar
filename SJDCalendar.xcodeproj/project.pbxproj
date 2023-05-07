@@ -14,6 +14,7 @@
 		48ACDCFB2A078B380098E7E6 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48ACDCFA2A078B380098E7E6 /* CardView.swift */; };
 		48ACDCFD2A0791E50098E7E6 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48ACDCFC2A0791E50098E7E6 /* DetailView.swift */; };
 		48ACDD002A0794F70098E7E6 /* DailyGoal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48ACDCFF2A0794F70098E7E6 /* DailyGoal.swift */; };
+		48D5055F2A07C8B5007579DA /* CalendarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D5055E2A07C8B5007579DA /* CalendarViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		48ACDCFA2A078B380098E7E6 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		48ACDCFC2A0791E50098E7E6 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		48ACDCFF2A0794F70098E7E6 /* DailyGoal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyGoal.swift; sourceTree = "<group>"; };
+		48D5055E2A07C8B5007579DA /* CalendarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 		48ACDCEA2A0738660098E7E6 /* SJDCalendar */ = {
 			isa = PBXGroup;
 			children = (
+				48D5055D2A07C81D007579DA /* ViewModel */,
 				48ACDCFE2A0794D10098E7E6 /* Model */,
 				48ACDCF92A078AC80098E7E6 /* View */,
 				48ACDCEB2A0738660098E7E6 /* SJDCalendarApp.swift */,
@@ -90,6 +93,14 @@
 				48ACDCFF2A0794F70098E7E6 /* DailyGoal.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		48D5055D2A07C81D007579DA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				48D5055E2A07C8B5007579DA /* CalendarViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -162,6 +173,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48D5055F2A07C8B5007579DA /* CalendarViewModel.swift in Sources */,
 				48ACDCEE2A0738660098E7E6 /* CalendarView.swift in Sources */,
 				48ACDCFD2A0791E50098E7E6 /* DetailView.swift in Sources */,
 				48ACDCFB2A078B380098E7E6 /* CardView.swift in Sources */,

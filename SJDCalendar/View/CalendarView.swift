@@ -9,14 +9,8 @@ import SwiftUI
 
 struct CalendarView: View {
     
-//    @Binding var dailyGoal: DailyGoal
-    let goalList = [
-        DailyGoal(date: "7월", list: ["스위프트유아이 공부", "코테 공부"]),
-        DailyGoal(date: "8월", list: ["스위프트유아이 공부", "코테 공부"]),
-        DailyGoal(date: "9월", list: ["스위프트유아이 공부", "코테 공부"]),
-        DailyGoal(date: "10월", list: ["스위프트유아이 공부", "코테 공부"]),
-        DailyGoal(date: "11월", list: ["스위프트유아이 공부", "코테 공부"]),
-    ]
+    @EnvironmentObject var viewModel: CalendarViewModel
+    @State var goalList: [DailyGoal] = []
     
     var body: some View {
         List {
@@ -29,6 +23,9 @@ struct CalendarView: View {
             }
         }
         .navigationTitle("Week Calendar")
+        .onReceive(viewModel.$goalList) { list in
+            goalList = list
+        }
     }
 }
 
