@@ -8,17 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		48ACDCEC2A0738660098E7E6 /* SJDCalendarApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48ACDCEB2A0738660098E7E6 /* SJDCalendarApp.swift */; };
-		48ACDCEE2A0738660098E7E6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48ACDCED2A0738660098E7E6 /* ContentView.swift */; };
+		48ACDCEE2A0738660098E7E6 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48ACDCED2A0738660098E7E6 /* CalendarView.swift */; };
 		48ACDCF02A0738680098E7E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48ACDCEF2A0738680098E7E6 /* Assets.xcassets */; };
 		48ACDCF32A0738680098E7E6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48ACDCF22A0738680098E7E6 /* Preview Assets.xcassets */; };
+		48ACDCFB2A078B380098E7E6 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48ACDCFA2A078B380098E7E6 /* CardView.swift */; };
+		48ACDCFD2A0791E50098E7E6 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48ACDCFC2A0791E50098E7E6 /* DetailView.swift */; };
+		48ACDD002A0794F70098E7E6 /* DailyGoal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48ACDCFF2A0794F70098E7E6 /* DailyGoal.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		48ACDCE82A0738660098E7E6 /* SJDCalendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SJDCalendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48ACDCEB2A0738660098E7E6 /* SJDCalendarApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SJDCalendarApp.swift; sourceTree = "<group>"; };
-		48ACDCED2A0738660098E7E6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		48ACDCED2A0738660098E7E6 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		48ACDCEF2A0738680098E7E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		48ACDCF22A0738680098E7E6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		48ACDCFA2A078B380098E7E6 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		48ACDCFC2A0791E50098E7E6 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		48ACDCFF2A0794F70098E7E6 /* DailyGoal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyGoal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +57,9 @@
 		48ACDCEA2A0738660098E7E6 /* SJDCalendar */ = {
 			isa = PBXGroup;
 			children = (
+				48ACDCFE2A0794D10098E7E6 /* Model */,
+				48ACDCF92A078AC80098E7E6 /* View */,
 				48ACDCEB2A0738660098E7E6 /* SJDCalendarApp.swift */,
-				48ACDCED2A0738660098E7E6 /* ContentView.swift */,
 				48ACDCEF2A0738680098E7E6 /* Assets.xcassets */,
 				48ACDCF12A0738680098E7E6 /* Preview Content */,
 			);
@@ -65,6 +72,24 @@
 				48ACDCF22A0738680098E7E6 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		48ACDCF92A078AC80098E7E6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				48ACDCED2A0738660098E7E6 /* CalendarView.swift */,
+				48ACDCFA2A078B380098E7E6 /* CardView.swift */,
+				48ACDCFC2A0791E50098E7E6 /* DetailView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		48ACDCFE2A0794D10098E7E6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				48ACDCFF2A0794F70098E7E6 /* DailyGoal.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +162,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				48ACDCEE2A0738660098E7E6 /* ContentView.swift in Sources */,
+				48ACDCEE2A0738660098E7E6 /* CalendarView.swift in Sources */,
+				48ACDCFD2A0791E50098E7E6 /* DetailView.swift in Sources */,
+				48ACDCFB2A078B380098E7E6 /* CardView.swift in Sources */,
 				48ACDCEC2A0738660098E7E6 /* SJDCalendarApp.swift in Sources */,
+				48ACDD002A0794F70098E7E6 /* DailyGoal.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct SJDCalendarApp: App {
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationView {
+                CalendarView()
+            }
         }
     }
 }
