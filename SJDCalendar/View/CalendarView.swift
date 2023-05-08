@@ -9,14 +9,14 @@ import SwiftUI
 
 struct CalendarView: View {
     
-    @EnvironmentObject var viewModel: CalendarViewModel
+    @ObservedObject var viewModel: CalendarViewModel
     @State var goalList: [DailyGoal] = []
     
     var body: some View {
         List {
             ForEach(goalList, id: \.id) { item in
                 NavigationLink {
-                    DetailView()
+                    DetailView(goalItem: binding(for: item))
                 } label: {
                     CardView(dailyGoal: item)
                 }
@@ -26,6 +26,14 @@ struct CalendarView: View {
         .onReceive(viewModel.$goalList) { list in
             goalList = list
         }
+    }
+    
+    // ForEach로 풀어진 item은 binding이 되어 있지 않다.
+    private func binding(for goalItem: DailyGoal) -> Binding<DailyGoal> {
+        guard let goalIndex = goalList.firstIndex(where: {$0.id == goalItem.id}) else {
+            fatalError("Can't find scrum in array")
+        }
+        return $goalList[goalIndex]
     }
 }
 

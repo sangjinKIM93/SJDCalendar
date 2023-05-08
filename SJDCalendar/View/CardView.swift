@@ -14,6 +14,7 @@ struct CardView: View {
     var body: some View {
         HStack(alignment: .center) {
             Text(dailyGoal.date)
+                .frame(width: 50)
             Spacer()
                 .frame(width: 20)
             VStack(alignment: .leading) {
