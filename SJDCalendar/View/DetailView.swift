@@ -13,20 +13,18 @@ struct DetailView: View {
     @State var todoList: [String] = [""]
     
     var body: some View {
-        // 미리 알림 UI 따라하기
         VStack {
             Spacer().frame(height: 10)
             List() {
-                Section(footer: TodoListFooter(todoList: $todoList)) {
-                    ForEach(todoList.indices, id: \.self) { index in
+                Section(footer: TodoListFooter(todoList: $goalItem.list)) {
+                    ForEach(goalItem.list.indices, id: \.self) { index in
                         VStack {
-                            TextField("목표를 적어주세요.", text: $todoList[index])
+                            TextField("목표를 적어주세요.", text: $goalItem.list[index])
                             Rectangle()
                                 .frame(height: 1)
                                 .foregroundColor(.gray.opacity(0.5))
                         }
                         .listRowSeparator(.hidden)
-                        
                     }
                 }
             }
