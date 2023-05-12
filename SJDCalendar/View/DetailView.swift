@@ -10,8 +10,6 @@ import SwiftUI
 struct DetailView: View {
     @Binding var goalItem: DailyGoal
     
-    @State var todoList: [String] = [""]
-    
     var body: some View {
         VStack {
             Spacer().frame(height: 10)
