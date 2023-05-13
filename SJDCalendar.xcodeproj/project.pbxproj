@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		480C73A72A0F270300CF7172 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 480C73A62A0F270300CF7172 /* RealmSwift */; };
 		48ACDCEC2A0738660098E7E6 /* SJDCalendarApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48ACDCEB2A0738660098E7E6 /* SJDCalendarApp.swift */; };
 		48ACDCEE2A0738660098E7E6 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48ACDCED2A0738660098E7E6 /* CalendarView.swift */; };
 		48ACDCF02A0738680098E7E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48ACDCEF2A0738680098E7E6 /* Assets.xcassets */; };
@@ -34,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				480C73A72A0F270300CF7172 /* RealmSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +121,9 @@
 			dependencies = (
 			);
 			name = SJDCalendar;
+			packageProductDependencies = (
+				480C73A62A0F270300CF7172 /* RealmSwift */,
+			);
 			productName = SJDCalendar;
 			productReference = 48ACDCE82A0738660098E7E6 /* SJDCalendar.app */;
 			productType = "com.apple.product-type.application";
@@ -147,6 +152,9 @@
 				Base,
 			);
 			mainGroup = 48ACDCDF2A0738660098E7E6;
+			packageReferences = (
+				480C73A52A0F270300CF7172 /* XCRemoteSwiftPackageReference "realm-cocoa" */,
+			);
 			productRefGroup = 48ACDCE92A0738660098E7E6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -379,6 +387,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		480C73A52A0F270300CF7172 /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-cocoa.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		480C73A62A0F270300CF7172 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 480C73A52A0F270300CF7172 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 48ACDCE02A0738660098E7E6 /* Project object */;
 }
