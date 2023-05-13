@@ -33,10 +33,11 @@ class CalendarViewModel: ObservableObject {
                     realm.add(item)
                 }
             }
-            
-            currentData = readData()
         }
-        self.goalList = currentData
+    }
+    
+    func refreshData() {
+        self.goalList = readData()
     }
     
     private func readData() -> [DailyGoal] {

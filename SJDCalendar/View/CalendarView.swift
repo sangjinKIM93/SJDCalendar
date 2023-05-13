@@ -26,6 +26,9 @@ struct CalendarView: View {
         .onReceive(viewModel.$goalList) { list in
             goalList = list
         }
+        .onAppear {
+            viewModel.refreshData()
+        }
     }
     
     // ForEach로 풀어진 item은 binding이 되어 있지 않다.
